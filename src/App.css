@@ -214,3 +214,8 @@ hr{
 }
 .btn:hover{
 }
+.btn-check:checked+.btn{
+  background-color: #E1A6FF !important;
+  border: none !important;
+  border-radius:10px !important;
+}
