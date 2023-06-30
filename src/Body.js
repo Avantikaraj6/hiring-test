@@ -4,15 +4,19 @@ import Wreview from "./Wreview";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
+
 const Body = () => {
 
     const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState('1');
+  
 
   const radios = [
     { name: 'monthly', value: '1' },
     { name: 'yearly', value: '2' }
   ];
+  
+  
 
   return (
     <>
@@ -21,6 +25,7 @@ const Body = () => {
         <Row className="features">
           <Col>
             <Row>
+            <Col sm={1}></Col>
               <Col sm={4} className="col-bor">
                 <h4 className="int">Interactive Features</h4>
                 <p className="loreum">
@@ -101,6 +106,7 @@ const Body = () => {
         <Container className="martin">
         <Row>
             <Col>
+            
        <Wreview
        id="12345"
        title="Basic Plan"

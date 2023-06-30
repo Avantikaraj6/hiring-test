@@ -10,7 +10,7 @@
   padding:15px 17px;
 }
 .Sign-up{
-  background-color: rgb(71, 118, 230, 1);
+  background: linear-gradient(45deg, rgba(71, 118, 230, 1), rgba(142, 84, 233, 1));
   border-radius: 7px;
     border: none;
     padding: 10px 30px;
@@ -75,8 +75,9 @@
   font-size:14px;
   font-weight: 700;
 }
-.col-bor{border: 1px solid black;
-border-radius:5px;}
+.col-bor{border: 1px solid #7A3199;
+border-radius:5px;
+padding-top: 10px;}
 .third{
   background-image: url("./images/Frame\ 78.png");
   background-size: 100% 100%;
@@ -87,6 +88,13 @@ border-radius:5px;}
   border-radius:10px;
   background-color: white;
   padding:10px 13px;
+}
+.dummy:hover{
+  background-color: #7A3199;
+  color:white !important;
+}
+.price-text:hover{
+  color:white !important;
 }
 .features{
   margin-top:-20rem !important;
