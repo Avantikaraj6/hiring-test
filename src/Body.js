@@ -1,8 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Wreview from "./Wreview";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
 const Body = () => {
+
+    const [checked, setChecked] = useState(false);
+  const [radioValue, setRadioValue] = useState('1');
+
+  const radios = [
+    { name: 'monthly', value: '1' },
+    { name: 'yearly', value: '2' }
+  ];
+
   return (
     <>
       <Container>
@@ -63,7 +74,26 @@ const Body = () => {
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's{" "}
-          </p></Col>
+          </p>
+      
+      <ButtonGroup>
+        {radios.map((radio, idx) => (
+          <ToggleButton
+            key={idx}
+            id={`radio-${idx}`}
+            type="radio"
+            variant={idx % 2 ? 'outline-1' : 'outline-2'}
+            name="radio"
+            value={radio.value}
+            checked={radioValue === radio.value}
+            onChange={(e) => setRadioValue(e.currentTarget.value)}
+          >
+            {radio.name}
+          </ToggleButton>
+        ))}
+      </ButtonGroup>
+      
+          </Col>
           <Col sm={4}></Col>
             </Row>
           
